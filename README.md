@@ -4,4 +4,4 @@
 ## Technologies
 Project was created with:
 * Java Version: 17
-* Spring Boot Version: 2.7.2
+* Spring Boot Version: 2.7.3
