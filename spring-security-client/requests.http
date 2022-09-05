@@ -1,0 +1,15 @@
+// Getting hello
+GET http://localhost:8080/hello
+
+###
+
+// Register a user
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "firstName": "Shabbir",
+  "lastName": "Dawoodi",
+  "email": "shabbir@gmail.com",
+  "password": "1234567"
+}

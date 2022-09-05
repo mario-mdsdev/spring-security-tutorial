@@ -1,5 +1,6 @@
 package com.mdsdev.spring.security.client.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,10 +27,13 @@ public class User {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @JsonIgnore
     @Column(length = 60)
     private String password;
 
     private String role;
+
+    @Builder.Default
     private boolean enabled = false;
 
 }
