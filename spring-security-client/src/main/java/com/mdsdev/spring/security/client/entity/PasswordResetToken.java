@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Data
-public class VerificationToken {
+public class PasswordResetToken {
 
     // --> Ten minutes for expiration time
     private static final int EXPIRATION_TIME = 10;
@@ -26,18 +26,18 @@ public class VerificationToken {
     @JoinColumn(name = "user_id",
             nullable = false,
             foreignKey = @ForeignKey(
-                    name = "FK_USER_VERIFY_TOKEN"
+                    name = "FK_USER_PASSWORD_TOKEN"
             )
     )
     private User user;
 
-    public VerificationToken(String token) {
+    public PasswordResetToken(String token) {
         super();
         this.token = token;
         this.expirationTime = calculateExpirationTime(EXPIRATION_TIME);
     }
 
-    public VerificationToken(User user, String token) {
+    public PasswordResetToken(User user, String token) {
         super();
         this.user = user;
         this.token = token;

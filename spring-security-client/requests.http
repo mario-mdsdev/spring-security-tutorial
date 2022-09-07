@@ -8,8 +8,43 @@ POST http://localhost:8080/register
 Content-Type: application/json
 
 {
-  "firstName": "Shabbir",
-  "lastName": "Dawoodi",
-  "email": "shabbir@gmail.com",
+  "firstName": "Nikhil",
+  "lastName": "Gupta",
+  "email": "nikhil@gmail.com",
   "password": "1234567"
 }
+
+###
+
+// Resend verification token
+GET http://localhost:8080/resendVerificationToken?token=fea4f77f-a8ee-4911-b170-fceb8eb3bf16
+
+###
+
+POST http://localhost:8080/resetPassword
+Content-Type: application/json
+
+{
+  "email": "nikhil@gmail.com"
+}
+
+###
+
+POST http://localhost:8080/savePassword?token=4b8378c8-2553-4b02-a2d5-932006c031ad
+Content-Type: application/json
+
+{
+  "newPassword": "1234"
+}
+
+###
+
+POST http://localhost:8080/changePassword
+Content-Type: application/json
+
+{
+  "email": "nikhil@gmail.com",
+  "oldPassword": "1234",
+  "newPassword": "5678"
+}
+
