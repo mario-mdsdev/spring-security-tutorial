@@ -1,5 +1,5 @@
 # My getting started of Spring Security
-## Tutorial from Daily Code Buffer
+### Tutorial from Daily Code Buffer
 
 ## Technologies
 Project was created with:
